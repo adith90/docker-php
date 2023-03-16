@@ -1,0 +1,54 @@
+{
+    "taskDefinitionArn": "arn:aws:ecs:ap-southeast-2:962308753838:task-definition/sample_project:1",
+    "containerDefinitions": [
+        {
+            "name": "worker",
+            "image": "962308753838.dkr.ecr.ap-southeast-2.amazonaws.com/nodejsapp",
+            "cpu": 0,
+            "portMappings": [
+                {
+                    "name": "worker-80-tcp",
+                    "containerPort": 80,
+                    "hostPort": 0,
+                    "protocol": "tcp",
+                    "appProtocol": "http"
+                }
+            ],
+            "essential": true,
+            "environment": [],
+            "environmentFiles": [],
+            "mountPoints": [],
+            "volumesFrom": []
+        }
+    ],
+    "family": "sample_project",
+    "executionRoleArn": "arn:aws:iam::962308753838:role/ecsTaskExecutionRole",
+    "networkMode": "bridge",
+    "revision": 1,
+    "volumes": [],
+    "status": "ACTIVE",
+    "requiresAttributes": [
+        {
+            "name": "com.amazonaws.ecs.capability.ecr-auth"
+        },
+        {
+            "name": "ecs.capability.execution-role-ecr-pull"
+        }
+    ],
+    "placementConstraints": [],
+    "compatibilities": [
+        "EC2"
+    ],
+    "requiresCompatibilities": [
+        "EC2"
+    ],
+    "cpu": "1024",
+    "memory": "3072",
+    "runtimePlatform": {
+        "cpuArchitecture": "X86_64",
+        "operatingSystemFamily": "LINUX"
+    },
+    "registeredAt": "2023-03-16T12:12:29.614Z",
+    "registeredBy": "arn:aws:iam::962308753838:user/pink-floyd",
+    "tags": []
+}
